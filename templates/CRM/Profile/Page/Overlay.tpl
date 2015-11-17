@@ -38,10 +38,10 @@
     {assign var="count" value="1"}
   {/if}
   <div class="crm-section {$rowName}-section">
-    <div class="label">
+    <div class="label crm-{$rowName} crm-{$ufGroupName}">
         {$field.label}
     </div>
-     <div class="content">
+     <div class="content crm-{$rowName} crm-{$ufGroupName}">
         {$field.value}
      </div>
      <div class="clear"></div>

@@ -33,10 +33,10 @@
             {crmRegion name=profile-view-`$ufGroupName`}
             {foreach from=$profileFields item=field key=rowName}
               <div id="row-{$rowName}" class="crm-section {$rowName}-section">
-                <div class="label {$rowName}">
+                <div class="label crm-{$rowName} crm-{$ufGroupName}">
                     {$field.label}
                 </div>
-                 <div class="content {$rowName}">
+                 <div class="content crm-{$rowName} crm-{$ufGroupName}">
                     {$field.value}
                  </div>
                  <div class="clear"></div>
