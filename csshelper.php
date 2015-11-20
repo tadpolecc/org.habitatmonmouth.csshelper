@@ -47,6 +47,7 @@ function csshelper_civicrm_uninstall() {
  */
 function csshelper_civicrm_enable() {
   _csshelper_civix_civicrm_enable();
+  civicrm_api3('Setting', 'create', array('disable_core_css' => 1,));
 }
 
 /**
@@ -56,6 +57,7 @@ function csshelper_civicrm_enable() {
  */
 function csshelper_civicrm_disable() {
   _csshelper_civix_civicrm_disable();
+  civicrm_api3('Setting', 'create', array('disable_core_css' => 0,));
 }
 
 /**
@@ -136,3 +138,22 @@ function csshelper_civicrm_preProcess($formName, &$form) {
 }
 
 */
+
+/*Enqueue default CiviCRM CSS in admin.  Create a filter to allow themes and other plugins to overrride */
+
+add_action( 'admin_enqueue_scripts', 'tc_admin_register_tad_civicrm_styles' );
+
+function tc_admin_register_tad_civicrm_styles() {
+  $tc_civi_css_admin = (plugin_dir_url('civicrm')  . 'civicrm/civicrm/css/civicrm.css');
+  $tc_civi_css_admin = apply_filters('tc_civicss_override_admin', $tc_civi_css_admin);
+  wp_enqueue_style ('tad_admin_civicrm',  $tc_civi_css_admin );
+}
+
+/*Enqueue custom CiviCRM CSS in front end of site.  Create a filter to allow themes and other plugins to overrride */
+
+add_action( 'wp_print_styles', 'tc_register_tad_civicrm_styles', 110 );
+function tc_register_tad_civicrm_styles() {
+  $tc_civi_css = (plugin_dir_url( __FILE__ )  . 'css/civicrm.css') ;
+  $tc_civi_css = apply_filters ( 'tc_civicss_override' ,  $tc_civi_css ) ;
+  wp_enqueue_style ('tad_civicrm', $tc_civi_css );
+}
