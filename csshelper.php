@@ -153,7 +153,8 @@ function tc_admin_register_tad_civicrm_styles() {
 
 add_action( 'wp_print_styles', 'tc_register_tad_civicrm_styles', 110 );
 function tc_register_tad_civicrm_styles() {
-  $tc_civi_css = (plugin_dir_url( __FILE__ )  . 'css/civicrm.css') ;
+  $tc_ext_url = CRM_Core_Resources::singleton()->getUrl('cc.tadpole.csshelper');
+  $tc_civi_css = ( $tc_ext_url  . 'css/civicrm.css') ;
   $tc_civi_css = apply_filters ( 'tc_civicss_override' ,  $tc_civi_css ) ;
   wp_enqueue_style ('tad_civicrm', $tc_civi_css );
 }
