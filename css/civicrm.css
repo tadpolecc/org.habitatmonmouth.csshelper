@@ -2435,8 +2435,6 @@ div.grippie {
 #crm-container .crm-button input.crm-form-submit-inline {
   padding: 2px 4px;
   margin: 0px;
-  background: none;
-  _background: #6C6C6C;
   /* IE6 only */
   border: none;
 }
