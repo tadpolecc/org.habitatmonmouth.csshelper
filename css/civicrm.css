@@ -52,11 +52,11 @@ CiviCRM CSS
   display: none;
 }
 
-.crm-form-checkbox, .form-checkbox {
+.crm-form-checkbox label, 
+.form-checkbox label {
   clear: both;
 }
 
-label, 
 .crm-form-checkbox,
 .form-checkbox {
   float: left;
