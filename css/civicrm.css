@@ -15,6 +15,10 @@ CiviCRM CSS
   box-sizing: content-box;
 }
 
+.crm-container label {
+  display: inline-block;
+}
+
 .crm-container .crm-quickSearchField {
   font-weight: normal;
 }
