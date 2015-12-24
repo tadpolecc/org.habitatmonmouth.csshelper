@@ -20,7 +20,7 @@
   <compatibility>
     <ver>4.6</ver>
   </compatibility>
-  <comments>Helping Front End Developers</comments>
+  <comments>Extension to help Front End Developerswith CiviCRM styling in Wordpress</comments>
   <civix>
     <namespace>CRM/Csshelper</namespace>
   </civix>
