@@ -61,11 +61,6 @@ CiviCRM CSS
   clear: both;
 }
 
-.crm-form-checkbox,
-.form-checkbox {
-  float: left;
-}
-
 input.form-checkbox,
 input.form-radio {
   cursor: pointer;
