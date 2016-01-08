@@ -16,9 +16,20 @@ Example Code:
 
 
     function tc_civicrm_theme_css( ) {
-        $tc_css = get_bloginfo( 'stylesheet_directory' ) .'/includes/css/civicrm.css';
+        $tc_css = get_stylesheet_directory_uri() .'/includes/css/civicrm.css';
 
         return $tc_css;
     }
 
     add_filter( 'tc_civicss_override', 'tc_civicrm_theme_css' ); 
+You can also just add additional css in your theme. As the civicrm.css from the extension loads with a priority of 110, set this higher.  The example shows '199' as the priority. Add the below function to your theme's functions.php or add a your own plugin to do this.   You will need to have the images directory /i  available at the same level as your civicrm.css file to show credit card icons and other images.
+
+Example Code:
+
+
+    function tc_civicrm_theme_addl_css( ) {
+    	wp_enqueue_style( 'tc_civi_style', get_stylesheet_directory_uri() . '/civicrm/civicrm.css' );
+    
+    }
+    
+    add_action( 'wp_print_styles', 'tc_civicrm_theme_addl_css', 199 ); 
