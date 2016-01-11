@@ -15,6 +15,10 @@ CiviCRM CSS
   box-sizing: content-box;
 }
 
+.crm-container label {
+  display: inline-block;
+}
+
 .crm-container .crm-quickSearchField {
   font-weight: normal;
 }
@@ -52,16 +56,9 @@ CiviCRM CSS
   display: none;
 }
 
-.crm-form-checkbox, .form-checkbox {
+.crm-form-checkbox label, 
+.form-checkbox label {
   clear: both;
-}
-
-label, 
-.crm-form-checkbox,
-.form-checkbox,
-.crm-form-radio,
-.form-radio {
-  float: left;
 }
 
 input.form-checkbox,
@@ -2433,10 +2430,8 @@ div.grippie {
 #crm-container .crm-button input[type=button],
 #crm-container .crm-button input.crm-form-submit,
 #crm-container .crm-button input.crm-form-submit-inline {
-  padding: 2px 4px;
+  padding: 2%;
   margin: 0px;
-  background: none;
-  _background: #6C6C6C;
   /* IE6 only */
   border: none;
 }
@@ -3561,27 +3556,6 @@ tbody.scrollContent tr.alternateRow {
   color: #E43D2B !important;
 }
 
-.crm-container div.status,
-div.m ul#civicrm-menu,
-.crm-container #help,
-.crm-container .help,
-.crm-container .ui-tabs-panel,
-.crm-container .crm-content-block,
-#full-screen-header,
-.crm-container .crm-pager,
-.crm-container form .section-hidden-border,
-.crm-container #search-status,
-.crm-container .crm-form-block,
-.crm-container .crm-search-tasks,
-.crm-container .crm-tasks,
-.crm-container div.form-item,
-.crm-container div.messages {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-}
-
 /* deprecated autocomplete styles */
 
 .ac_results {
@@ -4250,9 +4224,6 @@ span.crm-status-icon {
 .crm-container.crm-public .select2-container,
 .crm-container.crm-public .select2-results {
   font-size: 14px;
-}
-.crm-container.crm-public .select2-container .select2-choice {
-  padding: 5px 5px 5px 8px;
 }
 .crm-container.crm-public .select2-container-multi .select2-choices {
   padding: 4px;
