@@ -105,7 +105,7 @@ div#crm-container.crm-container.crm-public div.crm-section div.content label {
 
 .crm-container .crm-section .content {
   float: left;
-  margin: 0 0 0 5%;
+  margin: 0;
   width: auto;
 }
 
@@ -479,7 +479,6 @@ input.crm-form-entityref {
   border-top-style: none;
   margin: 0px;
   padding: 3px 0px 5px 0px;
-  clear: none;
   height: 100%;
 }
 
