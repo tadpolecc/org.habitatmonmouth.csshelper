@@ -46,7 +46,8 @@ function csshelper_civicrm_uninstall() {
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
 function csshelper_civicrm_enable() {
-
+  _csshelper_civix_civicrm_enable();
+  civicrm_api3('Setting', 'create', array('disable_core_css' => 1,));
 }
 
 /**
@@ -55,7 +56,8 @@ function csshelper_civicrm_enable() {
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
  */
 function csshelper_civicrm_disable() {
-
+  _csshelper_civix_civicrm_disable();
+  civicrm_api3('Setting', 'create', array('disable_core_css' => 0,));
 }
 
 /**
@@ -146,6 +148,23 @@ else {
 };
 
 function csshelper_register_admin_civicrm_styles() {
+  $tc_civi_css_admin = (plugin_dir_url('civicrm')  . 'civicrm/civicrm/css/civicrm.css');
+  $tc_civi_css_admin = apply_filters('tc_civicss_override_admin', $tc_civi_css_admin);
+  wp_enqueue_style ('tad_admin_civicrm',  $tc_civi_css_admin );
+}
+
+/*Enqueue default CiviCRM CSS on Front End.  Do this so we can use wp_enqueue_style as opposed to the way civicrm forces its styles to load the Drupal way in WP*/
+if ( ! function_exists( 'civi_wp' ) ) {
+}
+else {
+
+  add_action('wp_print_styles', 'csshelper_register_default_civicrm_styles', 100);
+};
+
+function csshelper_register_default_civicrm_styles() {
+  $tc_civi_css_default = (plugin_dir_url('civicrm')  . 'civicrm/civicrm/css/civicrm.css');
+  $tc_civi_css_default = apply_filters('tc_civicss_override_default', $tc_civi_css_default);
+  wp_enqueue_style ('tad_admin_civicrm',  $tc_civi_css_default );
 }
 
 /*Enqueue custom CiviCRM CSS in front end of site.  Create a filter to allow themes and other plugins to overrride */
