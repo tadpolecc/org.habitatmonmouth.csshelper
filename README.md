@@ -3,11 +3,11 @@
 Tadpole's CiviCRM CSS override allows the theme to control the CSS on frontend CiviCRM pages.
 This includes a templates directory to override selectors where they are lacking.
 
-This extension replaces the core CiviCRM CSS file with its own.
+This extension complements the core CiviCRM CSS file with its own.
 
-This extension supports 4.6.
+This extension supports 4.7.
 
-Version 1.2 is based on the /civicrm/css/civicrm.css from the 4.6 release.
+Version 4.7 is based on the /civicrm/css/civicrm.css from the 4.7 release.
 
 # Overrides
 You can now replace this extension's CSS file  with a custom one from your theme. This makes use of the tc_civicss_override filter.
