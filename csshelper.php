@@ -153,6 +153,20 @@ function csshelper_register_admin_civicrm_styles() {
   wp_enqueue_style ('tad_admin_civicrm',  $tc_civi_css_admin );
 }
 
+/*Enqueue default CiviCRM CSS on Front End.  Do this so we can use wp_enqueue_style as opposed to the way civicrm forces its styles to load the Drupal way in WP*/
+if ( ! function_exists( 'civi_wp' ) ) {
+}
+else {
+
+  add_action('wp_print_styles', 'csshelper_register_default_civicrm_styles', 100);
+};
+
+function csshelper_register_default_civicrm_styles() {
+  $tc_civi_css_default = (plugin_dir_url('civicrm')  . 'civicrm/civicrm/css/civicrm.css');
+  $tc_civi_css_default = apply_filters('tc_civicss_override_default', $tc_civi_css_default);
+  wp_enqueue_style ('tad_default_civicrm',  $tc_civi_css_default );
+}
+
 /*Enqueue custom CiviCRM CSS in front end of site.  Create a filter to allow themes and other plugins to overrride */
 if ( ! function_exists( 'civi_wp' ) ) {
 }
@@ -162,7 +176,7 @@ else {
 
 function csshelper_register_civicrm_styles() {
   $tc_ext_url = CRM_Core_Resources::singleton()->getUrl('cc.tadpole.csshelper');
-  $tc_civi_css = ( $tc_ext_url  . 'css/civicrm.css') ;
+  $tc_civi_css = ( $tc_ext_url  . 'css/tad-civicrm.css') ;
   $tc_civi_css = apply_filters ( 'tc_civicss_override' ,  $tc_civi_css ) ;
   wp_enqueue_style ('tad_civicrm', $tc_civi_css );
 }
