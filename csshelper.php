@@ -46,8 +46,7 @@ function csshelper_civicrm_uninstall() {
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
 function csshelper_civicrm_enable() {
-  _csshelper_civix_civicrm_enable();
-  civicrm_api3('Setting', 'create', array('disable_core_css' => 1,));
+
 }
 
 /**
@@ -56,8 +55,7 @@ function csshelper_civicrm_enable() {
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
  */
 function csshelper_civicrm_disable() {
-  _csshelper_civix_civicrm_disable();
-  civicrm_api3('Setting', 'create', array('disable_core_css' => 0,));
+
 }
 
 /**
@@ -148,9 +146,6 @@ else {
 };
 
 function csshelper_register_admin_civicrm_styles() {
-  $tc_civi_css_admin = (plugin_dir_url('civicrm')  . 'civicrm/civicrm/css/civicrm.css');
-  $tc_civi_css_admin = apply_filters('tc_civicss_override_admin', $tc_civi_css_admin);
-  wp_enqueue_style ('tad_admin_civicrm',  $tc_civi_css_admin );
 }
 
 /*Enqueue custom CiviCRM CSS in front end of site.  Create a filter to allow themes and other plugins to overrride */
