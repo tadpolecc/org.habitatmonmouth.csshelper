@@ -162,7 +162,7 @@ else {
 
 function csshelper_register_civicrm_styles() {
   $tc_ext_url = CRM_Core_Resources::singleton()->getUrl('cc.tadpole.csshelper');
-  $tc_civi_css = ( $tc_ext_url  . 'css/civicrm.css') ;
+  $tc_civi_css = ( $tc_ext_url  . 'css/rabbit.css') ;
   $tc_civi_css = apply_filters ( 'tc_civicss_override' ,  $tc_civi_css ) ;
   wp_enqueue_style ('tad_civicrm', $tc_civi_css );
 }
