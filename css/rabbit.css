@@ -1,0 +1,168 @@
+#crm-container.crm-public div.label{
+    text-align:left;
+}
+
+.crm-container .label label{
+    font-weight:bold;
+}
+
+#crm-container.crm-public .price-set-row span.crm-price-amount-label{
+    font-weight:normal;
+}
+
+#crm-container.crm-public .price-set-row .highlight span.crm-price-amount-label{
+    font-weight:bold;
+}
+
+#crm-container.crm-public .price-set-row span.crm-price-amount-amount{
+    font-weight:bold;
+}
+
+ .crm-container.crm-public .select2-container a.select2-choice{
+    padding:0;
+    padding-left: 10px;
+}
+
+.crm-container div.crm-search-tasks{
+    padding: 10px 15px 15px;
+}
+
+/* SUBMIT BUTTON STYLE  */
+#crm-container span.crm-button{
+  padding:0;
+}
+#crm-container .crm-button .crm-form-submit {
+  padding: 15px;
+  margin: 0px;
+  /* IE6 only */
+  border: none;
+  background-color: #222;
+  box-sizing: content-box;
+  display: inline-block;
+  float: left;
+  width: auto;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.crm-i.fa-check{
+  display:none;
+}
+
+/* KEEP ASTRISK ON THE SAME LINE AS LABEL */
+.crm-section.billing_name_address-section div.label, .crm-block .credit_card_info-group div.label, .crm-section.other_amount-section, .crm-public-form-item.crm-section.email-5-section, .crm-section.other_amount-section, .crm-public-form-item.email-5-section, .crm-profile-name-event_registration .label, .crm-section.price_set-section .label {
+	white-space:nowrap;
+}
+
+/* STYLE THE FIELDSETS */
+
+div.crm-container fieldset {
+	border: 1px solid #bbb;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+.crm-container fieldset legend {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px;
+  background: none;
+  border: medium none;
+  background-color: transparent;
+  color: #3E3E3E;
+  position: relative;
+  text-indent: 0px;
+  width: auto;
+}
+
+#crm-container.crm-public .crm-section,
+div.crm-section {
+  margin-bottom: 15px;
+}
+
+/* MODIFY HEIGHt and WIDTH OF TEXT INPUT FIELDS */
+#crm-container.crm-public .crm-block input[type="text"],
+#crm-container.crm-public .crm-block input[type="password"],
+#crm-container.crm-public .crm-block input[type="email"],
+#crm-container.crm-public .crm-block select {
+  font-size: 0.85em;
+  padding: 2px 5px 0;
+  width: 50%;
+}
+
+/* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
+.crm-container .crm-section div.content {
+  margin-left: 25%;
+}
+
+/* CORRECT WIDTH FOR CC EXP */
+#crm-container.crm-public div.crm-block select {
+    width:20%;
+}
+
+/* ADD SPACE BTW INPUTS */
+#crm-container.crm-public div.crm-section{
+	margin-bottom: 15px;
+}
+
+/* REMOVE PRINT BUTTON */
+#crm-container .fa-print {
+    display:none;
+}
+
+/* SECURITY CODE */
+#crm-container input#cvv2 {
+    max-width: 60px;
+    display: inline;
+}
+
+/* MAKE WIDTH SIMILAR TO CALDERA FORM WIDTH */
+div#crm-container {
+    max-width: 640px;
+}
+
+/* FORCE WIDE TABLES TO SCROLL INSTEAD OF OVERFLOWING OFF THE PAGE */
+.crm-main-content-wrapper form{
+	overflow: scroll;
+}
+
+/* CORRECT WIDTH DROPDOWNS */
+div.crm-container.crm-public .select2-container,
+div.crm-container.crm-public .select2-results {
+  width: 50% !important;
+}
+
+/*  MOBILE */
+@media only screen and (max-device-width: 667px) { 
+	/* LABELS ON THEIR OWN ROW */
+  	#crm-container .label {
+	    display: block;
+	    float: none;
+	}
+
+	/* CORRECT WIDTH FOR MOBILE */
+	#crm-container.crm-public .crm-block input[type="text"],
+	#crm-container.crm-public .crm-block input[type="password"],
+	#crm-container.crm-public .crm-block input[type="email"],
+	#crm-container.crm-public .crm-block select {
+	  width: 90%;
+	}
+
+	/* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
+	.crm-container .crm-section div.content {
+	  margin-left: 0;
+	}
+
+	/* MOBILE CORRECT WIDTH FOR LABELS */
+	#crm-container.crm-public div.label{
+	    width: 100%;
+	}
+
+	/* CORRECT WIDTH DROPDOWNS */
+	div.crm-container.crm-public .select2-container,
+	div.crm-container.crm-public .select2-results {
+	  width: 90% !important;
+	}
+}
