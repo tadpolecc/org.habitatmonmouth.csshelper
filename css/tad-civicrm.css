@@ -131,38 +131,47 @@ div#crm-container {
 /* CORRECT WIDTH DROPDOWNS */
 div.crm-container.crm-public .select2-container,
 div.crm-container.crm-public .select2-results {
-  width: 50% !important;
+  width: 70% !important;
 }
 
-/*  MOBILE */
-@media only screen and (max-device-width: 667px) { 
-	/* LABELS ON THEIR OWN ROW */
-  	#crm-container .label {
-	    display: block;
-	    float: none;
-	}
+/* LABELS ON THEIR OWN ROW */
+	#crm-container .label {
+    display: block;
+    float: none;
+}
 
-	/* CORRECT WIDTH FOR MOBILE */
-	#crm-container.crm-public .crm-block input[type="text"],
-	#crm-container.crm-public .crm-block input[type="password"],
-	#crm-container.crm-public .crm-block input[type="email"],
-	#crm-container.crm-public .crm-block select {
-	  width: 90%;
-	}
+/* CORRECT WIDTH  */
+#crm-container.crm-public .crm-block input[type="text"],
+#crm-container.crm-public .crm-block input[type="password"],
+#crm-container.crm-public .crm-block input[type="email"],
+#crm-container.crm-public .crm-block select {
+  width: 70%;
+}
 
-	/* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
-	.crm-container .crm-section div.content {
-	  margin-left: 0;
-	}
+/* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
+.crm-container .crm-section div.content {
+  margin-left: 0;
+}
 
-	/* MOBILE CORRECT WIDTH FOR LABELS */
-	#crm-container.crm-public div.label{
-	    width: 100%;
-	}
+/* MOBILE CORRECT WIDTH FOR LABELS */
+#crm-container.crm-public div.label{
+    width: 100%;
+}
 
-	/* CORRECT WIDTH DROPDOWNS */
-	div.crm-container.crm-public .select2-container,
-	div.crm-container.crm-public .select2-results {
-	  width: 90% !important;
-	}
+/* CORRECT WIDTH DROPDOWNS */
+div.crm-container.crm-public .select2-container,
+div.crm-container.crm-public .select2-results {
+  width: 70% !important;
+}
+
+/* move helper text to right of input */
+.crm-section.price_set-section input{
+    display:inline-block;
+    margin-right:10px
+}
+
+/* set the reoccuring inputs to the same line */
+#crm-container #frequency_interval, #crm-container #installments{
+    width:10%;
+    display:inline-block;
 }
