@@ -175,3 +175,13 @@ div.crm-container.crm-public .select2-results {
     width:10%;
     display:inline-block;
 }
+
+// label display on the same line as input fields
+.crm-public-form-item label, #priceset label {
+    display: inline;
+}
+
+// align submit button to the right site: SSA
+#_qf_Main_reload {
+    float: right;
+}
