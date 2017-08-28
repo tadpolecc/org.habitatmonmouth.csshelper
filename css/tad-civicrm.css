@@ -158,12 +158,6 @@ div.crm-container.crm-public .select2-results {
     width: 100%;
 }
 
-/* CORRECT WIDTH DROPDOWNS */
-div.crm-container.crm-public .select2-container,
-div.crm-container.crm-public .select2-results {
-  width: 70% !important;
-}
-
 /* move helper text to right of input */
 .crm-section.price_set-section input{
     display:inline-block;
