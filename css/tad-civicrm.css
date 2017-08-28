@@ -140,12 +140,12 @@ div.crm-container.crm-public .select2-results {
     float: none;
 }
 
-/* CORRECT WIDTH  */
+/* 25% WIDTH for textfields  */
 #crm-container.crm-public .crm-block input[type="text"],
 #crm-container.crm-public .crm-block input[type="password"],
 #crm-container.crm-public .crm-block input[type="email"],
 #crm-container.crm-public .crm-block select {
-  width: 70%;
+  width: 25%;
 }
 
 /* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
@@ -193,4 +193,14 @@ div.crm-container.crm-public .select2-results {
 
 #_qf_Main_reload {
     float: right;
+}
+
+@media (max-width:640px){
+  /* 100% WIDTH for textfields  */
+  #crm-container.crm-public .crm-block input[type="text"],
+  #crm-container.crm-public .crm-block input[type="password"],
+  #crm-container.crm-public .crm-block input[type="email"],
+  #crm-container.crm-public .crm-block select {
+    width: 95%;
+  }
 }
