@@ -89,7 +89,6 @@ div.crm-section {
 #crm-container.crm-public .crm-block select {
   font-size: 0.85em;
   padding: 2px 5px 0;
-  width: 50%;
 }
 
 /* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
@@ -118,20 +117,9 @@ div.crm-section {
     display: inline;
 }
 
-/* MAKE WIDTH SIMILAR TO CALDERA FORM WIDTH */
-div#crm-container {
-    max-width: 640px;
-}
-
 /* FORCE WIDE TABLES TO SCROLL INSTEAD OF OVERFLOWING OFF THE PAGE */
 .crm-main-content-wrapper form{
 	overflow: scroll;
-}
-
-/* CORRECT WIDTH DROPDOWNS */
-div.crm-container.crm-public .select2-container,
-div.crm-container.crm-public .select2-results {
-  width: 70% !important;
 }
 
 /* LABELS ON THEIR OWN ROW */
