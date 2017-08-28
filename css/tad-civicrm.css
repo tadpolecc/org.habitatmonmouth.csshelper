@@ -177,7 +177,6 @@ div.crm-container.crm-public .select2-results {
 }
 
 
-// full width profiles
 div#crm-container.crm-container {
     max-width: 100%;
 }
@@ -188,12 +187,10 @@ div.crm-container.crm-public .select2-results {
   width: 100% !important;
 }
 
-// label display on the same line as input fields
 .crm-public-form-item label, #priceset label {
     display: inline;
 }
 
-// align submit button to the right site: SSA
 #_qf_Main_reload {
     float: right;
 }
