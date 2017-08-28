@@ -140,12 +140,12 @@ div.crm-container.crm-public .select2-results {
     float: none;
 }
 
-/* CORRECT WIDTH  */
+/* 25% WIDTH for textfields  */
 #crm-container.crm-public .crm-block input[type="text"],
 #crm-container.crm-public .crm-block input[type="password"],
 #crm-container.crm-public .crm-block input[type="email"],
 #crm-container.crm-public .crm-block select {
-  width: 70%;
+  width: 25%;
 }
 
 /* PROVIDE SUFFICIENT SPACE TO THE LEFT PAYMENT PAGE COLUMNS */
@@ -156,12 +156,6 @@ div.crm-container.crm-public .select2-results {
 /* MOBILE CORRECT WIDTH FOR LABELS */
 #crm-container.crm-public div.label{
     width: 100%;
-}
-
-/* CORRECT WIDTH DROPDOWNS */
-div.crm-container.crm-public .select2-container,
-div.crm-container.crm-public .select2-results {
-  width: 70% !important;
 }
 
 /* move helper text to right of input */
@@ -177,7 +171,6 @@ div.crm-container.crm-public .select2-results {
 }
 
 
-// full width profiles
 div#crm-container.crm-container {
     max-width: 100%;
 }
@@ -188,12 +181,25 @@ div.crm-container.crm-public .select2-results {
   width: 100% !important;
 }
 
-// label display on the same line as input fields
 .crm-public-form-item label, #priceset label {
     display: inline;
 }
 
-// align submit button to the right site: SSA
 #_qf_Main_reload {
     float: right;
+}
+
+/* add padding to radio/checkbox label */
+div.crm-container input[type="checkbox"]+label ,div.crm-container input[type="radio"]+label{
+    padding-left:7px;
+}
+
+@media (max-width:640px){
+  /* 100% WIDTH for textfields  */
+  #crm-container.crm-public .crm-block input[type="text"],
+  #crm-container.crm-public .crm-block input[type="password"],
+  #crm-container.crm-public .crm-block input[type="email"],
+  #crm-container.crm-public .crm-block select {
+    width: 95%;
+  }
 }
