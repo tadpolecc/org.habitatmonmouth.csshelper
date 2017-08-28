@@ -195,6 +195,11 @@ div.crm-container.crm-public .select2-results {
     float: right;
 }
 
+/* add padding to radio/checkbox label */
+div.crm-container input[type="checkbox"]+label ,div.crm-container input[type="radio"]+label{
+    padding-left:7px;
+}
+
 @media (max-width:640px){
   /* 100% WIDTH for textfields  */
   #crm-container.crm-public .crm-block input[type="text"],
