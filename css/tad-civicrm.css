@@ -176,6 +176,18 @@ div.crm-container.crm-public .select2-results {
     display:inline-block;
 }
 
+
+// full width profiles
+div#crm-container.crm-container {
+    max-width: 100%;
+}
+
+/* 100% WIDTH option menus */
+div.crm-container.crm-public .select2-container,
+div.crm-container.crm-public .select2-results {
+  width: 100% !important;
+}
+
 // label display on the same line as input fields
 .crm-public-form-item label, #priceset label {
     display: inline;
