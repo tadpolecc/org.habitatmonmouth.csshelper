@@ -171,9 +171,18 @@ div#crm-container.crm-container {
     float: right;
 }
 
+.cividiscount #_qf_Main_reload {
+    float: none;
+}
+
 /* add padding to radio/checkbox label */
 div.crm-container input[type="checkbox"]+label ,div.crm-container input[type="radio"]+label{
     padding-left:7px;
+}
+
+/* this is to correct the width of the discount module table*/
+.crm-container .cividiscount.form-layout-compressed td.label, .crm-container table.cividiscount.form-layout-compressed {
+    width: auto;
 }
 
 @media (max-width:640px){
