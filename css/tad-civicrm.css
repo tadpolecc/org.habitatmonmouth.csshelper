@@ -167,6 +167,14 @@ div#crm-container.crm-container {
     display: inline;
 }
 
+#_qf_Main_reload {
+    float: right;
+}
+
+.cividiscount #_qf_Main_reload {
+    float: none;
+}
+
 /* add padding to radio/checkbox label */
 div.crm-container input[type="checkbox"]+label ,div.crm-container input[type="radio"]+label{
     padding-left:7px;
