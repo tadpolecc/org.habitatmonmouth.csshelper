@@ -163,12 +163,6 @@ div#crm-container.crm-container {
     max-width: 100%;
 }
 
-/* 100% WIDTH option menus */
-div.crm-container.crm-public .select2-container,
-div.crm-container.crm-public .select2-results {
-  width: 100% !important;
-}
-
 .crm-public-form-item label, #priceset label {
     display: inline;
 }
