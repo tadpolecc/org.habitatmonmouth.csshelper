@@ -177,6 +177,7 @@ div#crm-container.crm-container {
     margin: 0px;
     border: none;
     background-color: #222;
+    background-image: none;
     box-sizing: content-box;
     display: inline-block;
     width: auto;
