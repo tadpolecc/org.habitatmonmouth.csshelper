@@ -158,7 +158,7 @@ if ( ! function_exists( 'civi_wp' ) ) {
 }
 else {
 
-  add_action('wp_print_styles', 'csshelper_register_default_civicrm_styles', 100);
+  //add_action('wp_print_styles', 'csshelper_register_default_civicrm_styles', 100);
 };
 
 function csshelper_register_default_civicrm_styles() {
@@ -178,5 +178,7 @@ function csshelper_register_civicrm_styles() {
   $tc_ext_url = CRM_Core_Resources::singleton()->getUrl('cc.tadpole.csshelper');
   $tc_civi_css = ( $tc_ext_url  . 'css/tad-civicrm.css') ;
   $tc_civi_css = apply_filters ( 'tc_civicss_override' ,  $tc_civi_css ) ;
-  wp_enqueue_style ('tad_civicrm', $tc_civi_css );
+  //wp_enqueue_style ('tad_civicrm', $tc_civi_css );
+  wp_dequeue_style( 'select2' );
+  wp_deregister_style( 'select2' );
 }
