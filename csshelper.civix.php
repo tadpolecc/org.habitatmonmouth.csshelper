@@ -175,7 +175,7 @@ function _csshelper_civix_civicrm_managed(&$entities) {
     $es = include $file;
     foreach ($es as $e) {
       if (empty($e['module'])) {
-        $e['module'] = 'cc.tadpole.csshelper';
+        $e['module'] = 'org.habitatmonmouth.csshelper';
       }
       $entities[] = $e;
     }
@@ -204,7 +204,7 @@ function _csshelper_civix_civicrm_caseTypes(&$caseTypes) {
       // throw new CRM_Core_Exception($errorMessage);
     }
     $caseTypes[$name] = array(
-      'module' => 'cc.tadpole.csshelper',
+      'module' => 'org.habitatmonmouth.csshelper',
       'name' => $name,
       'file' => $file,
     );
@@ -230,7 +230,7 @@ function _csshelper_civix_civicrm_angularModules(&$angularModules) {
     $name = preg_replace(':\.ang\.php$:', '', basename($file));
     $module = include $file;
     if (empty($module['ext'])) {
-      $module['ext'] = 'cc.tadpole.csshelper';
+      $module['ext'] = 'org.habitatmonmouth.csshelper';
     }
     $angularModules[$name] = $module;
   }

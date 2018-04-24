@@ -1,4 +1,4 @@
-Package: cc.tadpole.csshelper
+Package: org.habitatmonmouth.csshelper
 Copyright (C) 2015, Kevin Cristiano <kcristiano@tadpole.cc>
 Licensed under the GNU Affero Public License 3.0 (below).
 

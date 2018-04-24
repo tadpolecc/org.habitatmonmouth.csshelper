@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<extension key="cc.tadpole.csshelper" type="module">
+<extension key="org.habitatmonmouth.csshelper" type="module">
   <file>csshelper</file>
   <name>CSS Helper for WordPress and CiviCRM</name>
   <description>Template changes to assist in CSS styling and a way to override civicrm.css on the front end</description>
@@ -9,8 +9,8 @@
     <email>info@tadpole.cc</email>
   </maintainer>
   <urls>
-    <url desc="Main Extension Page">https://develop.tadpole.cc/extensions/cc.tadpole.csshelper</url>
-    <url desc="Documentation">https://develop.tadpole.cc/extensions/cc.tadpole.csshelper</url>
+    <url desc="Main Extension Page">https://github.com/tadpolecc/org.habitatmonmouth.csshelper</url>
+    <url desc="Documentation">https://github.com/tadpolecc/org.habitatmonmouth.csshelper/blob/master/README.md</url>
     <url desc="Support">https://tadpole.cc</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
@@ -18,7 +18,7 @@
   <version>4.7</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>4.7</ver>
+    <ver>4.7 5.0</ver>
   </compatibility>
   <comments>Extension to help Front End Developer swith CiviCRM styling in WordPress</comments>
   <civix>
